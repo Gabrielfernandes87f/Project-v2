@@ -22,7 +22,12 @@ export default {
   name: 'InputType',
   data() {
     return {
-      profissao: 'ainda nao sei'
+      profissao: 'ainda nao sei',
+           // se essa function for true, o pai vai renderizar o filho (v-if e v-else)
+     esta_trabalhando: true,
+     // essa condiçao mostrar ou nao mostra. (v-show)
+     mostrar_email: true,
+     email: 'gabriel@gmail.com'
     }
  },
  created() {
@@ -35,15 +40,6 @@ export default {
    setTimeout(() => {
      this.profissao = 'fullstack'
     }, 4000)
- },
- data() {
-   return {
-     // se essa function for true, o pai vai renderizar o filho (v-if e v-else)
-     esta_trabalhando: true,
-     // essa condiçao mostrar ou nao mostra. (v-show)
-     mostrar_email: true,
-     email: 'gabriel@gmail.com'
-   }
  }
 
 }

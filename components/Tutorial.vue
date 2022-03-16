@@ -6,12 +6,20 @@
       {{ desc }}
     </div>
     <div class>
-      <CardBody />
+      <CardBody :mostrar_email="true" />
     <div>
      <InputType />
     </div>
     <div>
       <Pessoa />
+    </div>
+    <div>
+      <Form
+      emailProps="test@props"
+      :inputColor="inputColor"
+      :input-type="inputType"
+      :inputName="inputName"
+      />
     </div>
     </div>
   </div>
@@ -21,16 +29,21 @@
 import CardBody from './CardBody'
 import InputType from './InputType'
 import Pessoa from './Pessoa'
+import Form from './Form.vue'
 export default {
   name: 'NuxtTutorial',
   components: {
     CardBody,
     InputType,
-    Pessoa
-  },
+    Pessoa,
+    Form
+},
   data() {
     return {
-      desc: 'Vue.js é uma biblioteca JavaScript de código aberto, desenvolvida pelo Vue.js Team, que permite a criação de interfaces de usuário através de componentes reutilizáveis.'
+      desc: 'Vue.js é uma biblioteca JavaScript de código aberto, desenvolvida pelo Vue.js Team, que permite a criação de interfaces de usuário através de componentes reutilizáveis.',
+      inputColor: '#000',
+      inputType: 'text',
+      inputName: 'Nome'
     }
   }
 }
